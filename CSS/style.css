@@ -1,0 +1,34 @@
+/* .point {
+  position: absolute;
+  left: 30px;
+  top: 100px;
+} */
+
+.button {
+  background-color: #428ce1; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 50px;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: #246ec3;
+  padding: 15px 50px;
+  border-radius: 30px;
+}
+
+.buttons {
+  width: 40%;
+  float: left;
+}
+
+.content {
+  width: 60%;
+  float: right;
+}
