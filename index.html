@@ -4,67 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>ЛР2</title>
     <link rel="stylesheet" href="CSS/style.css" />
-    <!-- <script src="JS\script.js"></script> -->
+    <script src="JS\script.js"></script>
     <script src="JS\Chart.js"></script>
   </head>
   <body>
     <div class="buttons">
       <input
-        class="button"
-        onclick="Draw()"
+        class=" button button1"
+        onclick="pict()"
         type="button"
         value="График"
       /><br />
-      <input class="button" type="button" value="Таблица" />
+      <input
+        class="button button2"
+        onclick="table_create()"
+        type="button"
+        value="Таблица"
+      />
     </div>
     <div class="content">
-      <canvas id="myChart" width="700" height="450"></canvas>
+      <div id="graph">
+        <canvas id="myChart" width="700" height="450"></canvas>
+      </div>
+      <div id="tableDiv">
+        <table class="table_dark">
+          <tr>
+            <th>X</th>
+            <th>Y</th>
+          </tr>
+        </table>
+      </div>
     </div>
-    <script type="text/javascript">
-      function Draw() {
-        var ctx = document.getElementById("myChart").getContext("2d");
-        // ctx.clearRect(0, 0, canvas.width, canvas.height);
-        var myChart = new Chart(ctx, {
-          type: "line",
-          data: {
-            labels: [],
-            datasets: [
-              {
-                label: "f(x)",
-                data: [],
-                borderColor: "#2B5CC6",
-                borderWidth: 3,
-                fill: false //Не заполнять под графиком
-              }
-            ]
-          },
-          options: {
-            responsive: false, //Вписывать в размер canvas
-            scales: {
-              xAxes: [{ display: true }],
-              yAxes: [
-                {
-                  display: true
-                }
-              ]
-            }
-          }
-        });
-        //Заполняем данными
-        for (var x = -2 * Math.PI; x <= 2 * Math.PI; x += Math.PI / 10) {
-          myChart.data.labels.push("" + x.toFixed(2));
-          myChart.data.datasets[0].data.push(f(x).toFixed(2));
-        }
-        //Обновляем
-        myChart.update();
-
-        function f(x) {
-          //Вычисление нужной функции
-          return Math.log(Math.sqrt(1 + 2 * Math.pow(x, 2)));
-        }
-      }
-    </script>
   </body>
 </html>

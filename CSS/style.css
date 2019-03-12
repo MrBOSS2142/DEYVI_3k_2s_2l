@@ -32,3 +32,24 @@
   width: 60%;
   float: right;
 }
+
+.table_dark {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 18px;
+  width: 640px;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 50px;
+}
+.table_dark th {
+  color: #246ec3;
+  border: 2px solid #246ec3;
+  background: #c8d2ff;
+  border-bottom: 2px solid red;
+  padding: 12px 17px;
+}
+.table_dark td {
+  color: #626262;
+  border: 2px solid #246ec3;
+  padding: 7px 17px;
+}
